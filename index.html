@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Set character encoding -->
+  <meta charset="utf-8">
+  <!-- Set the viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <!-- Set title -->
+  <title>Photo Gallery</title>
+  <!-- Request styles -->
+  <link rel="stylesheet" href="/pwm/style/main.css" />
+</head>
+<body>
+  <header>
+    <h1>Photo Gallery</h1>
+  </header>
+  <main>
+    <div class="img-container">
+      <img src="/pwm/images/pic01.jpg" alt="Snow Mountain Landscape Photo">
+    </div>
+    <h2>Welcome</h2>
+    <p>
+      Selamat Datang di Web ini, web ini akan menampilkan beberapa foto yang menarik untuk dilihat
+      . Foto disini ditampilkan berdasarkan kategori yang sesuai.
+    </p>
+    <ul>
+      <li><a href="/pwm/pages/post1.html">Nature</a></li>
+      <li><a href="/pwm/pages/post2.html">Macro Photo</a></li>
+      <li><a href="/pwm/pages/post3.html">Night Landscape</a></li>
+      <li><a href="/pwm/non-existent.html">Non-existent file</a></li>
+	  <li><a href="/pwm/pages/datajson.html">DataJSON</a></li>
+    </ul>
+  </main>
+  <footer>
+    <a href="https://github.com/meindika">github.com/meindika</a>
+   
+  </footer>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw-dika.js')
+        .then(swReg => {
+          console.log('Service Worker is registered', swReg);
+        })
+        .catch(err => {
+          console.error('Service Worker Error', err);
+        });
+      });
+    }
+  </script>
+</body>
+</html>
